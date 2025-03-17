@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Rater</title>
+    <style >
+        body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px 0;
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+h1{
+     color: white;
+      background-color: black; 
+      padding: 10px;
+      text-align: center; 
+}
+#ramen-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#ramen-menu img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+#ramen-menu img:hover {
+    border-color: black;
+}
+#ramen-detail {
+    margin: 0 auto 20px;
+    text-align: center;
+}
+ #ramen-detail img {
+    width: 80px
+}
+
+#new-ramen {
+    margin-top: 0;
+}
+
+#new-ramen input, #new-ramen textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+}
+
+
+#new-ramen button {
+    padding: 8px 15px;
+    background-color: grey;
+    color: black;
+    border: black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#new-ramen button:hover {
+    background-color: #333;
+}
+
+#new-ramen label{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+      
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ramen Rater</h1>
+
+        
+        <div id="ramen-menu">
+            
+        </div>
+
+        
+        <div id="ramen-detail">
+            <div id="detail-image"></div>
+            <h2>Ramen Details</h2>
+            <p><strong>Name:</strong> <span id="ramen-name"></span></p>
+            <p><strong>Restaurant:</strong> <span id="ramen-restaurant"></span></p>
+            <p><strong>Rating:</strong> <span id="ramen-rating"></span></p>
+            <p><strong>Comment:</strong> <span id="ramen-comment"></span></p>
+        </div>
+    
+
+    
+    <h2>Add New Ramen</h2>
+    <form id="new-ramen">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="restaurant">Restaurant:</label>
+        <input type="text" id="restaurant" name="restaurant" required><br>
+
+        <label for="image">Image URL:</label>
+        <input type="url" id="image" name="image" required><br>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="10" required><br>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea><br>
+
+        <button type="submit">Add Ramen</button>
+    </form>
+
+
+<script src="index2.js"></script>
+</body>
+</html>
+
+
